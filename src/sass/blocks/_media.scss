@@ -1,0 +1,21 @@
+@include lg () {
+    .container {
+        max-width: 960px;
+    }
+}
+@include md() {
+    .container {
+        max-width: 720px;
+    }
+}
+@include sm() {
+    .container {
+        max-width: 540px;
+    }
+}
+@include xs() {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}

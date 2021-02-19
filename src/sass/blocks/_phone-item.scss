@@ -1,0 +1,43 @@
+.phone-item {
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    a {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        color: #ffffff;
+        span {
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffd000;
+        }
+    }
+    @include md() {
+        margin-right: 15px;
+        font-size: 16px;
+        a {
+            font-size: 13px;
+        }
+    }
+    @include sm() {
+        font-size: 18px;
+        line-height: 24px;
+        a {
+            font-size: 16px;
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+    @include xs() {
+        font-size: 13px;
+        a {
+            font-size: 13px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}

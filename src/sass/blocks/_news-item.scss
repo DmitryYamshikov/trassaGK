@@ -1,0 +1,102 @@
+.news-item {
+    position: relative;
+    overflow: hidden;
+    width: 270px;
+    height: 337px;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 84, 147, 0.3);
+    border-radius: 4px;
+    padding: 15px;
+    /* .news-item__img */
+    &:hover {
+        padding: 0;
+        .news-item {
+            &__text {
+                display: none;
+            }
+            &__img {
+                height: 100%;
+            }
+            &__info {
+                top: 0;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 200px;
+        transition: all 0.3s linear;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* .news-item__text */
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    /* .news-item__date */
+
+    &__date {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffd000;
+    }
+
+    /* .news-item__descr */
+
+    &__descr {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #212121;
+    }
+
+    /* .news-item__info */
+
+    &__info {
+        transition: all 0.3s linear;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 5px rgba(0, 84, 147, 0.5);
+        border-radius: 4px;
+        padding: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    /* .news-item__info-date */
+
+    &__info-date {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+    }
+
+    /* .news-item__info-title */
+
+    &__info-title {
+        margin-top: 16px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 150%;
+        color: #ffd000;
+    }
+
+    /* .news-item__info-text */
+
+    &__info-text {
+        margin-top: 35px;
+        font-size: 14px;
+        line-height: 150%;
+        color: #ffffff;
+    }
+}

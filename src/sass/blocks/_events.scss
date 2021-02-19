@@ -1,0 +1,42 @@
+.events {
+    margin-top: 45px;
+    /* .events_news */
+
+    &_news {
+    }
+
+    /* .events__header */
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+            margin-top: 0;
+        }
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            color: #005493;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* .events__wrapper */
+
+    &__wrapper {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* .events__item */
+
+    &__item {
+    }
+}

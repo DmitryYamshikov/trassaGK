@@ -1,0 +1,30 @@
+.gift-step {
+    width: 216px;
+    height: 172px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 17px;
+    padding-top: 6px;
+    align-items: center;
+    border: 2px solid #005493;
+    box-sizing: border-box;
+    border-radius: 4px;
+    overflow: hidden;
+    /* .gift-step__img */
+
+    &__img {
+        height: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* .gift-step__text */
+
+    &__text {
+        margin-top: 7px;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: #626262;
+    }
+}
