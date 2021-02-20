@@ -1,0 +1,152 @@
+.transport {
+    margin-top: 37px;
+    /* .transport__title */
+
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 150%;
+        color: #212121;
+    }
+
+    /* .transport__wrapper */
+
+    &__wrapper {
+        margin: 0 - 25px;
+        margin-top: 20px;
+        display: flex;
+    }
+
+    /* .transport__col */
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        margin: 0 25px;
+    }
+
+    /* .transport__subtitle */
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 150%;
+        color: #212121;
+        margin-bottom: 20px;
+    }
+
+    /* .transport__scheme */
+
+    &__scheme {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            margin-bottom: 22px;
+            padding-left: 50px;
+            position: relative;
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-image: url(../img/ico/metro.svg);
+            }
+            span {
+                margin-right: 15px;
+                position: relative;
+                font-size: 18px;
+                line-height: 150%;
+                color: #212121;
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .metro {
+                margin-right: 15px;
+                display: inline-block;
+                min-width: 160px;
+                padding-left: 25px;
+                padding-right: 40px;
+                &:before {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background-color: #c4c4c4;
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 30px;
+                    height: 1px;
+                    background: #212121;
+                }
+            }
+            .bus {
+                padding-left: 50px;
+                &:before {
+                    background-image: url(../img/ico/bus.svg);
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .martax {
+                padding-left: 50px;
+                &:before {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(../img/ico/minibus.svg);
+                }
+            }
+            .trolley {
+                padding-left: 50px;
+                &:before {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(../img/ico/trolley.svg);
+                }
+            }
+        }
+    }
+
+    /* .transport__bus-station */
+
+    &__bus-station {
+        padding-left: 50px;
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212121;
+        position: relative;
+        &:before {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 30px;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/ico/loc.svg);
+        }
+    }
+
+    /* .transport__contacts */
+
+    &__contacts {
+        margin-top: 30px;
+    }
+}

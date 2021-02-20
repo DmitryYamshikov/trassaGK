@@ -1,4 +1,4 @@
-"use strict";
+
 
 window.addEventListener("DOMContentLoaded", () => {
     // добавление классов для меню и под меню
@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     // добавление кнопки для переключения под меню
-    function addTogglerMenu (selector) {
+    function addTogglerMenu(selector) {
         const liWithSub = document.querySelectorAll(selector);
         liWithSub.forEach(item => {
             const toggler = document.createElement('div');
@@ -31,9 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
     /* addTogglerMenu('.menu__has-sub'); */
 
 
-    
-    addTogglerMenu('.sidebar .menu__has-sub').forEach(item=>{
-        item.addEventListener('click', function(e) {
+
+    addTogglerMenu('.sidebar .menu__has-sub').forEach(item => {
+        item.addEventListener('click', function (e) {
             if (e.target.closest('.toggler-menu')) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     document.addEventListener('click', (e) => {
-        
+
         if (!e.target.closest('.phone-togler') && !e.target.closest('.header__contacts-mobile-more')) {
             phoneMore.classList.remove('active');
         }
@@ -60,8 +60,20 @@ window.addEventListener("DOMContentLoaded", () => {
     phoneTogler.addEventListener('click', () => {
         phoneMore.classList.toggle('active');
     });
+    //слайдер фотоальбомов на главной
+    $('.photoalbum__slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        /* autoplay: true,
+        autoplaySpeed: 2000, */
+        infinite: true,
+        prevArrow: '<button class="slider-arrow slider-arrow_prev"></button>',
+        nextArrow: '<button class="slider-arrow slider-arrow_next"></button>',
+    });
 
-    // раскрывающееся sidebar-menu
-    
-    
+
+});
+
+$(document).ready(function () {
+
 });
