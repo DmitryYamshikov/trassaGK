@@ -52,11 +52,15 @@
         }
     }
 
-    /* .contacts__mail */
 
     &__mail {
         &:before {
             background-image: url(../img/ico/mail.svg);
         }
+    }
+    @include lg() {
+        /* &__mail {
+            margin-top: 25px;
+        } */
     }
 }

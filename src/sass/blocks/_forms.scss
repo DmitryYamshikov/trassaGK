@@ -1,0 +1,106 @@
+.form {
+    &__title {
+        font-weight: 500;
+        line-height: 150%;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    select {
+        border-radius: 4px;
+        width: 100%;
+        height: 36px;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+            margin-top: 5px;
+            border-radius: 4px;
+            height: 36px;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        textarea {
+            margin-top: 5px;
+            border-radius: 4px;
+            height: 127px;
+            width: 100%;
+            resize: none;
+        }
+        &.form__input {
+            &_short {
+                width: 150px;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    &_modal {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 578px;
+        min-height: 400px;
+        padding: 45px 100px 70px 100px;
+        background: #5d9bc9;
+        border-radius: 4px;
+        max-width: 95vw;
+        max-height: 95vh;
+        overflow-y: auto;
+        .form__title {
+            color: #ffffff;
+        }
+        select {
+            border: 1px solid #ffd000;
+            padding: 5px 10px;
+            font-size: 16px;
+            line-height: 150%;
+            option {
+                font-size: 16px;
+                line-height: 150%;
+                padding: 5px 15px;
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: #ffd000;
+                }
+            }
+        }
+        label {
+            font-size: 16px;
+            line-height: 150%;
+            color: #ffffff;
+            textarea {
+                margin-top: 5px;
+                border: 1px solid #ffd000;
+            }
+            input {
+                border: 1px solid #ffd000;
+            }
+        }
+        .btn {
+            margin-top: 20px;
+        }
+    }
+}
+@include sm() {
+    .form {
+        &_modal {
+            padding: 20px;
+            .form {
+                &__row {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

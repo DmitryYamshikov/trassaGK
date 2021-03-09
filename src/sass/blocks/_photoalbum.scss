@@ -68,4 +68,26 @@
         margin-top: 40px;
     }
     
+    @include lg() {
+        &__slider-wrapper {
+            max-width: 830px;
+        }
+    }
+    @include md() {
+        &__slider-wrapper {
+            max-width: 599px;
+        }
+        &__slider {
+            .slider-arrow_next {
+                right: -60px;
+            }
+        }
+    }
+}
+@include sm() {
+    .index-page {
+        .photoalbum {
+            display: none;
+        }
+    }
 }

@@ -7,7 +7,7 @@
     /* .album-item__img */
     &:hover {
         .album-item__title {
-            color:#005493;
+            color: #005493;
         }
     }
     &__img {
@@ -24,7 +24,7 @@
         &:hover {
             .album-item__descr {
                 visibility: visible;
-                opacity:1;
+                opacity: 1;
             }
         }
     }
@@ -32,9 +32,9 @@
     /* .album-item__descr */
 
     &__descr {
-        opacity:0;
+        opacity: 0;
         visibility: hidden;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
         position: absolute;
         top: 0;
         left: 0;
@@ -51,22 +51,22 @@
         line-height: 150%;
         color: #ffffff;
 
-        span {padding-left: 35px;
+        span {
+            padding-left: 35px;
             position: relative;
             &:before {
                 position: absolute;
                 display: block;
-                content:'';
+                content: "";
                 width: 30px;
                 height: 30px;
                 background-image: url(../img/ico/camera.svg);
-                left:0;
-                top:0;
+                left: 0;
+                top: 0;
             }
         }
         &:hover {
-            color:#fff;
-            
+            color: #fff;
         }
     }
 
@@ -79,5 +79,12 @@
         line-height: 150%;
         text-align: center;
         color: #212121;
+    }
+    @include lg() {
+        height: 250px;
+        &__img {
+            width: 200px;
+            height: 200px;
+        }
     }
 }

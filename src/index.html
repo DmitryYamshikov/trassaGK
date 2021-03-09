@@ -3,7 +3,7 @@
     @@include('./_head.html')
     <body>
         @@include('./_header.html')
-        <div class="page-content">
+        <div class="page-content index-page">
             <div class="container">
                 <div class="first-section">
                     <sidebar class="sidebar">
@@ -285,14 +285,14 @@
                         </div>
                     </div>
                 </section>
-                <section class="events events_news">
+                <section class="events events_sale">
                     <div class="events__header">
                         <h2>Рекламные акции</h2>
                         <a href="#">Все акции</a>
                     </div>
                     <div class="events__wrapper">
-                        <div class="sale-item">
-                            <div class="sale-item__img">
+                        <div class="sale-item ">
+                            <div class="sale-item__img decor2">
                                 <img src="img/img/sale1.jpg" alt="sale" />
                                 <div class="sale-item__info decor2">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, ut ipsum
@@ -336,6 +336,9 @@
                             </div>
                             <div class="sale-item__title">Рекламная акция №1</div>
                         </div>
+                    </div>
+                    <div class="events__all-events">
+                        <a href="#">Все акции</a>
                     </div>
                 </section>
                 <section class="photoalbum">
@@ -457,7 +460,8 @@
                 </section>
             </div>
         </div>
-
+        @@include('./_footer.html')
+        @@include('./_modal.html')
         @@include('./_script.html')
     </body>
 </html>

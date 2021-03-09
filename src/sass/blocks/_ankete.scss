@@ -1,0 +1,49 @@
+.ankete {
+    width: 100%;
+    background: rgba(255, 208, 0, 0.4);
+    border-radius: 4px;
+    padding: 30px;
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        text-align: center;
+        color: #212121;
+    }
+    &__tab-togler {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__form {
+        display: none;
+        margin-top: 35px;
+        input,
+        textarea {
+            border: 1px solid #005493;
+        }
+        &.active {
+            display: block;
+        }
+        label.file {
+            align-self: center;
+            width: auto;
+            cursor:pointer;
+            input {
+                display: none;
+            }
+            position: relative;
+            padding-left: 30px;
+            &:before {
+                left: 0;
+                position: absolute;
+                display: block;
+                content:'';
+                width: 25px;
+                height: 25px;
+                background-image: url(../img/ico/skrepka.svg);
+            }
+        }
+    }
+}

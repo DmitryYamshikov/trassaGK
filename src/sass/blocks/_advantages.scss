@@ -8,10 +8,23 @@
     }
     &__item {
         margin: 0 15px;
-        
     }
     .btn {
         margin: 0 auto;
         margin-top: 30px;
+    }
+    @include lg() {
+        &__item {
+            margin: 0 10px;
+        }
+    }
+    @include sm() {
+        margin-top: 10px;
+        &__wrapper {
+            flex-wrap: wrap;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }

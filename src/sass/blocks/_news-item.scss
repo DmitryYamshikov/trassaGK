@@ -99,4 +99,7 @@
         line-height: 150%;
         color: #ffffff;
     }
+    @include lg() {
+        width: 220px;
+    }
 }

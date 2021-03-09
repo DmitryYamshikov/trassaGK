@@ -56,4 +56,13 @@
         text-align: center;
         color: #212121;
     }
+    @include lg() {
+        width: 300px;
+    }
+    @include md() {
+        margin: 15px;
+    }
+    @include sm() {
+        margin:0;
+    }
 }

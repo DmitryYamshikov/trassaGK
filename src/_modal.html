@@ -1,0 +1,41 @@
+<div class="modal">
+    <form action="POST" class="form form_modal">
+        <div class="form__title">
+            Есть вопрос? <br />
+            Заполните форму, и мы ответим
+        </div>
+        <div class="form__row">
+            <select name="theme-select">
+                <option selected>Выберите тему обращения</option>
+                <option value="Общий вопрос">Общий вопрос</option>
+                <option value="По вопросам размещения рекламы на АЗС">По вопросам размещения рекламы на АЗС</option>
+                <option value="По вопросам доставки товаров в магазины на АЗС">
+                    По вопросам доставки товаров в магазины на АЗС
+                </option>
+                <option value="По топливным картам">По топливным картам</option>
+                <option value="По вопросам сотрудничества персонала">По вопросам сотрудничества персонала</option>
+            </select>
+        </div>
+        <div class="form__row">
+            <label>Ваше имя
+                <input type="text" name='name' required></input>
+            </label>
+        </div>
+                <div class="form__row">
+            <label>Номер Телефона
+                <input type="text" name='phone'></input>
+            </label>
+        </div>
+                <div class="form__row">
+            <label>E-mail
+                <input type="text" name="email"></input>
+            </label>
+        </div>
+        <div class="form__row">
+            <label>Ваш вопрос<textarea name="question" cols="30" rows="10"></textarea></label>
+        </div>
+        <div class="form__row">
+            <button class="btn"><span>Задать вопрос</span></button>
+        </div>
+    </form>
+</div>

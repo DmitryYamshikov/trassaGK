@@ -24,6 +24,9 @@
             &:hover {
                 text-decoration: none;
             }
+            @include sm() {
+                display: none;
+            }
         }
     }
 
@@ -34,9 +37,96 @@
         display: flex;
         justify-content: space-between;
     }
-
+    &__all-events {
+        display: none;
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            color: #005493;
+        }
+        @include sm() {
+            display: block;
+        }
+    }
     /* .events__item */
 
     &__item {
+    }
+    @include md() {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item {
+            margin: 15px;
+        }
+    }
+    @include sm() {
+        margin-top: 80px;
+        &_sale {
+            .events__wrapper {
+                width: 300px;
+                margin: 0 auto;
+                margin-top: 25px;
+                .slider-arrow {
+                    transition: all 0.3s linear;
+                    border: 2px solid #005493;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(calc(-100% - 28px));
+
+                    &:before {
+                        transition: all 0.3s linear;
+                        display: block;
+                        content: "";
+                        position: absolute;
+
+                        width: 15px;
+                        height: 15px;
+
+                        border-bottom: 3px solid #005493;
+                    }
+                    &:hover {
+                        background-color: #005493;
+                        &:before {
+                            border-color: #fff;
+                        }
+                    }
+                    &_prev {
+                        right: 0;
+                        transform: translateY(calc(-100% - 28px)) translateX(calc(-100% - 15px));
+                        &:before {
+                            top: 11px;
+                            left: 15px;
+                            border-left: 3px solid #005493;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &_next {
+                        right: 0px;
+                        &:before {
+                            border-right: 3px solid #005493;
+                            transform: rotate(-45deg);
+                            top: 11px;
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include sm() {
+    .index-page {
+        .events_news {
+            display: none;
+        }
     }
 }

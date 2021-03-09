@@ -7,22 +7,33 @@
         font-size: 36px;
         line-height: 150%;
         color: #212121;
+        @include xs() {
+            font-size: 24px;
+        }
     }
 
     /* .transport__wrapper */
 
     &__wrapper {
-        margin: 0 - 25px;
+        margin: 0 -25px;
         margin-top: 20px;
         display: flex;
     }
-
+    &__map {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
     /* .transport__col */
 
     &__col {
         display: flex;
         flex-direction: column;
         margin: 0 25px;
+        &:first-child {
+            min-width: 520px;
+        }
     }
 
     /* .transport__subtitle */
@@ -33,6 +44,9 @@
         line-height: 150%;
         color: #212121;
         margin-bottom: 20px;
+        @include xs() {
+            font-size: 18px;
+        }
     }
 
     /* .transport__scheme */
@@ -50,8 +64,7 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 0;
                 width: 30px;
                 height: 30px;
                 background-image: url(../img/ico/metro.svg);
@@ -101,6 +114,8 @@
                     background-image: url(../img/ico/bus.svg);
                     width: 40px;
                     height: 40px;
+                    transform: none;
+                    top: -9px;
                 }
             }
             .martax {
@@ -109,6 +124,8 @@
                     width: 40px;
                     height: 40px;
                     background-image: url(../img/ico/minibus.svg);
+                    transform: none;
+                    top: -9px;
                 }
             }
             .trolley {
@@ -117,6 +134,8 @@
                     width: 40px;
                     height: 40px;
                     background-image: url(../img/ico/trolley.svg);
+                    transform: none;
+                    top: -9px;
                 }
             }
         }
@@ -137,7 +156,7 @@
             content: "";
             width: 30px;
             height: 30px;
-            left:0;
+            left: 0;
             top: 50%;
             transform: translateY(-50%);
             background-image: url(../img/ico/loc.svg);
@@ -148,5 +167,22 @@
 
     &__contacts {
         margin-top: 30px;
+        @include xs() {
+            .contacts__phone {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    @include lg() {
+        &__col {
+            &:first-child {
+                min-width: unset;
+            }
+        }
+    }
+    @include md() {
+        &__wrapper {
+            flex-direction: column;
+        }
     }
 }

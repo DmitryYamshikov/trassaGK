@@ -1,0 +1,37 @@
+.breadcrumbs {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 0;
+    }
+    a {
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: #005493;
+        &:hover {
+            text-decoration: none;
+        }
+        margin-right: 10px;
+        padding-right: 15px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 0;
+            top:5px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid  #FFD000;
+            border-right: 2px solid  #FFD000;    
+            transform: rotate(45deg) ;  
+        }
+    }
+    span {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #212121;
+    }
+}

@@ -3,4 +3,7 @@
     justify-content: space-between;
     margin-top: 37px;
     align-items: flex-start;
+    @include sm() {
+        margin-top: 20px;
+    }
 }

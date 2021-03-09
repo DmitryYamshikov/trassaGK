@@ -103,4 +103,42 @@
             object-fit: contain;
         }
     }
+    @include lg() {
+        &__banner {
+            margin-right: 15px;
+        }
+    }
+    @include md() {
+        &__banner {
+            display: none;
+        }
+    }
+    @include sm() {
+        &__gift {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__install-right {
+            margin-left: 30px;
+        }
+    }
+    @include xs() {
+        position: relative;
+        &__install-icons {
+            height: 153px;
+            flex-direction: column;
+            padding: 15px 0;
+            justify-content: space-between;
+            a {
+                width: 155px;
+            }
+        }
+        &__install-right {
+            width: 153px;
+            height: 153px;
+            position: absolute;
+            right:0;
+            bottom:0;
+        }
+    }
 }

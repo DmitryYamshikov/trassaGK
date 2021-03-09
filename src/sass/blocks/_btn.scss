@@ -14,6 +14,7 @@
     background: #005493;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transform: skewX(-15deg);
+    cursor: pointer;
     span {
         position: relative;
         display: block;
@@ -37,5 +38,25 @@
         top: 6px;
         left: 11px;
         transform: skewX(15deg);
+    }
+    &_light {
+        background: #40AAE5;
+    }
+    &_wide {
+        &:after {
+            background-image: url(../img/ico/beforebgwide.svg);
+        }
+    }
+    &.active {
+        background: #005493;
+    }
+}
+@media (max-width:360px) {
+    .btn {
+        &_wide {
+            &:after {
+                background-image: none;
+            }
+        }
     }
 }

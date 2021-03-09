@@ -1,5 +1,5 @@
 .item-advantages {
-    flex: 0 0 33%;
+    flex: 0 0 29%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,5 +68,41 @@
         text-align: center;
         color: #212121;
         opacity: 0.6;
+    }
+    @include sm() {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: row;
+        width: 100%;
+        flex: 1 0 100%;
+        margin-top: 21px;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__img {
+            margin-right: 18px;
+            width: 50px;
+            height: 50px;
+            border:none;
+            box-shadow: none;
+            transform: none;
+            img {
+                transform: none;
+            }
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+        &__descr {
+            align-items: flex-start;
+            flex: unset;
+            width: 100%;
+        }
+        &__text {
+            text-align: left;
+        }
+        &__title {
+            text-align: left;
+        }
     }
 }

@@ -35,4 +35,12 @@
         line-height: 150%;
         color: #545454;
     }
+    @include md() {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+    }
+    @include sm() {
+        display: none;
+    }
 }

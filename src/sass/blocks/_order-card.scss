@@ -1,0 +1,57 @@
+.order-card {
+    h2 {
+        width: 70%;
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__ankete {
+        flex: 0 0 480px;
+        max-width: 480px;
+        margin-left: 24px;
+    }
+    &__img {
+        width: 396px;
+        height: 252px;
+        position: relative;
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 18px;
+        .phone-item {
+            margin-left: 25px;
+            padding-left: 35px;
+            width: 350px;
+            position: relative;
+            a {
+                color: #000;
+                font-size: 18px;
+                font-weight: 600;
+                span {
+                    font-size: 24px;
+                    font-weight: 900;
+                }
+            }
+            &:before {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+                left:0;
+                width: 25px;
+                height: 25px;
+                background-image: url(../img/ico/phone2.svg);
+            }
+
+        }
+    }
+}

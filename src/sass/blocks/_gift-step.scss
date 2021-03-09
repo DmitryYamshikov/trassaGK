@@ -27,4 +27,7 @@
         text-align: center;
         color: #626262;
     }
+    @include sm() {
+        margin: 15px;
+    }
 }

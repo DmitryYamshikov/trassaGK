@@ -15,4 +15,11 @@
         align-items: center;
         justify-content: center;
     }
+    @include lg() {
+        min-width: 280px;
+        margin-right: 20px;
+    }
+    @include md() {
+        display: none;
+    }
 }

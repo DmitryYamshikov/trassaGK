@@ -3,12 +3,21 @@
 
 @import "base/variables";
 @import "base/mixins";
-
+html, body {
+    /* overflow-x:hidden; */
+}
+body{
+    height: 100%;
+    min-height: 100vh;
+}
 h1 {
     font-weight: bold;
     font-size: 36px;
     line-height: 150%;
     color: #212121;
+    @include sm() {
+        font-size: 24px;
+    }
 }
 h2 {
     font-weight: bold;
@@ -16,6 +25,9 @@ h2 {
     line-height: 150%;
     color: #212121;
     margin-top: 30px;
+    @include sm() {
+        font-size: 20px;
+    }
 }
 h3 {
     font-weight: 600;
@@ -25,8 +37,6 @@ h3 {
 }
 * {
     font-family: "Lato", sans-serif;
-    /* margin: 0;
-    padding: 0; */
 }
 a {
     transition: all .3s linear;
@@ -35,7 +45,16 @@ a {
     width: 1180px;
     margin: 0 auto;
 }
-
+img {
+    max-width: 100%;
+}
+.page-content {
+    background-image: url(../img/bg/contentbg.jpg);
+    
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
 @import "blocks/header";
 @import "blocks/logo";
 @import "blocks/phone-item";
@@ -58,6 +77,15 @@ a {
 @import "blocks/album-item";
 @import "blocks/transport";
 @import "blocks/contacts";
+@import "blocks/socials";
+@import "blocks/author";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/forms";
+@import "blocks/breadcrumbs";
+@import "blocks/order-card";
+@import "blocks/ankete";
+@import "blocks/bottom-form";
 
 
 
