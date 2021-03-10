@@ -3,10 +3,12 @@
 
 @import "base/variables";
 @import "base/mixins";
-html, body {
+html,
+body {
     /* overflow-x:hidden; */
 }
-body{
+body {
+    overflow-x: hidden;
     height: 100%;
     min-height: 100vh;
 }
@@ -15,7 +17,9 @@ h1 {
     font-size: 36px;
     line-height: 150%;
     color: #212121;
+    margin-bottom: 50px;
     @include sm() {
+        margin-bottom: 15px;
         font-size: 24px;
     }
 }
@@ -39,7 +43,7 @@ h3 {
     font-family: "Lato", sans-serif;
 }
 a {
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 }
 .container {
     width: 1180px;
@@ -50,10 +54,11 @@ img {
 }
 .page-content {
     background-image: url(../img/bg/contentbg.jpg);
-    
+
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
+    padding-bottom: 100px;
 }
 @import "blocks/header";
 @import "blocks/logo";
@@ -86,6 +91,13 @@ img {
 @import "blocks/order-card";
 @import "blocks/ankete";
 @import "blocks/bottom-form";
+@import "blocks/pagination";
+@import "blocks/cafe-descr";
+@import "blocks/album";
+
+
+
+
 
 
 

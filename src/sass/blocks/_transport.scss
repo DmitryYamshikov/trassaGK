@@ -18,6 +18,10 @@
         margin: 0 -25px;
         margin-top: 20px;
         display: flex;
+        @include lg() {
+            margin: 0;
+            margin-top: 20px;
+        }
     }
     &__map {
         width: 100%;

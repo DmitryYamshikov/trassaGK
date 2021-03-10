@@ -15,6 +15,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include xs() {
+            .btn {
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
     &__form {
         display: none;
@@ -29,7 +36,7 @@
         label.file {
             align-self: center;
             width: auto;
-            cursor:pointer;
+            cursor: pointer;
             input {
                 display: none;
             }
@@ -39,11 +46,16 @@
                 left: 0;
                 position: absolute;
                 display: block;
-                content:'';
+                content: "";
                 width: 25px;
                 height: 25px;
                 background-image: url(../img/ico/skrepka.svg);
             }
+        }
+        @include xs() {
+                .form__row {
+                    flex-wrap: wrap;
+                }
         }
     }
 }

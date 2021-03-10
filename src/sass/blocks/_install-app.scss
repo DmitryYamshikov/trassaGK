@@ -125,6 +125,8 @@
     @include xs() {
         position: relative;
         &__install-icons {
+            margin: 0;
+            margin-top: 20px;
             height: 153px;
             flex-direction: column;
             padding: 15px 0;

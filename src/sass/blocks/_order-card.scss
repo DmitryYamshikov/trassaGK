@@ -1,14 +1,27 @@
 .order-card {
     h2 {
         width: 70%;
+        @include sm() {
+            width: 100%;
+        }
     }
     &__wrapper {
         display: flex;
+        @include md() {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__ankete {
         flex: 0 0 480px;
         max-width: 480px;
         margin-left: 24px;
+        @include md() {
+            margin-left: 0;
+        }
+        @include xs() {
+            max-width: 100%;
+        }
     }
     &__img {
         width: 396px;
@@ -17,8 +30,18 @@
         margin-bottom: 40px;
         img {
             width: 100%;
+            
             height: 100%;
             object-fit: cover;
+        }
+        @include md() {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include xs() {
+            max-width: 396px;
+            width: 90%;
+            height: auto;
         }
     }
     &__footer {
@@ -52,6 +75,21 @@
                 background-image: url(../img/ico/phone2.svg);
             }
 
+        }
+        @include md() {
+            .phone-item {
+                margin-right: 0;
+            }
+        }
+        @include xs() {
+            flex-direction: column;
+            /* align-items: center; */
+            text-align: center;
+            .phone-item {
+                margin-top: 20px;
+                margin-left: 0;
+                width: auto;
+            }
         }
     }
 }
