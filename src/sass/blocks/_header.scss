@@ -29,7 +29,7 @@
                 width: 130px;
                 &:after {
                     background-size: contain;
-                    top:14px;
+                    top: 14px;
                 }
             }
         }
@@ -42,6 +42,14 @@
         justify-content: space-between;
         flex-wrap: wrap;
         width: 240px;
+        .phone-item {
+            font-family: "Magistral";
+            font-weight: 400;
+            span {
+                color: #fff;
+                font-size: 12px;
+            }
+        }
         @include lg() {
             flex-direction: column;
             width: 120px;
@@ -73,10 +81,19 @@
             border-right: 2px solid #ffd000;
             cursor: pointer;
         }
+        .phone-item {
+            font-family: "Magistral";
+            font-weight: 400;
+            span {
+                color: #fff;
+                font-size: 12px;
+            }
+        }
         @include sm() {
             order: 3;
             display: block;
             &-more {
+                z-index: 5;
                 display: none;
                 position: absolute;
                 top: 100%;
@@ -92,7 +109,7 @@
                     & > div {
                         margin-bottom: 10px;
                     }
-                    a {
+                    a,span {
                         color: #212121;
                     }
                 }
@@ -205,7 +222,6 @@
     }
     @include xs() {
         .btn {
-
         }
     }
 }
