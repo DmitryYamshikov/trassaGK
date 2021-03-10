@@ -191,6 +191,15 @@
         }
         &__menu {
             display: none;
+            ul {
+                flex-direction: row;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+            li {
+                margin-left: 0;
+                width: 40%;
+            }
         }
         &__menu-mobile {
             
@@ -208,7 +217,7 @@
             ul {
                 display: none;
                 &.active {
-                    display: block;
+                    display: flex;
                 }
             }
         }

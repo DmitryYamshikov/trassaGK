@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "Lato";
     font-display: swap;
     src:url("../fonts/Lato-Thin.woff2") format("woff2"),
@@ -80,8 +80,6 @@
         url("../fonts/Lato-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-}
+} */
 
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");

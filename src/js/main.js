@@ -122,15 +122,50 @@ window.addEventListener("DOMContentLoaded", () => {
     const btnsTabAnkete = document.querySelectorAll('.ankete__tab-togler .btn');
     if (btnsTabAnkete) {
         const anketeTabs = document.querySelectorAll('.ankete__tabs .form');
-        btnsTabAnkete.forEach((item,i) => {
-            item.addEventListener('click', ()=>{
-                btnsTabAnkete.forEach(item2=>{
+        btnsTabAnkete.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                btnsTabAnkete.forEach(item2 => {
                     item2.classList.remove('active');
                 });
                 item.classList.add('active');
-                anketeTabs.forEach(itemTabs=>itemTabs.classList.remove('active'));
+                anketeTabs.forEach(itemTabs => itemTabs.classList.remove('active'));
                 anketeTabs[i].classList.add('active');
             });
+        });
+    }
+
+
+    //мобильное меню в шапке
+    var phone1Href = $('#phone1').attr('href'); //-Тут телефон
+    var phone1Cont = $('#phone1').html();
+
+    var email1Href = $('#email1').attr('href'); //- Тут email
+    var email1Cont = $('#email1').html();
+
+    var $menu = $('#menu-left'),
+        $html = $('html, body');
+    $("#menu-left").mmenu({
+        extensions: ["position-front"], // Это чтобы не сдвигался бэкграунд
+        
+        "navbars": [
+            {
+                "position": "bottom",
+                "content": [
+                    /* "<a href=" + phone1Href + " class='phone-left'>" + phone1Cont + "</a>",
+                    "<a href=" + email1Href + " class='email-left'>" + email1Cont + "</a>" */
+                ]
+            }
+        ]
+    }, {
+        "language": "ru"
+    });
+    
+
+    //меню в подвале
+    const burger = document.querySelector('.footer .menu__burger');
+    if (burger) {
+        burger.addEventListener('click', function(e) {
+            this.nextElementSibling.classList.toggle('active');
         });
     }
 });
